@@ -5,7 +5,6 @@ import {
   Title,
   Select,
   Button,
-  Container,
   Card,
   Image,
   Group,
@@ -35,6 +34,7 @@ function App() {
     },
     validate: {
       image: (value) => (!value ? "Image is required" : null),
+      social_media: (value) => (!value ? "Social media is required" : null),
     },
   });
 
@@ -69,10 +69,7 @@ function App() {
   });
 
   return (
-    <AppShell
-      header={{ height: 60 }}
-      padding="md"
-    >
+    <AppShell header={{ height: 60 }} padding="md">
       <AppShell.Header>
         <div className={classes.header}>
           <Group justify="space-between">
@@ -95,8 +92,7 @@ function App() {
         </div>
       </AppShell.Header>
 
-      <AppShell.Main
-      >
+      <AppShell.Main>
         <div className={classes.main}>
           <Title
             order={2}
@@ -104,7 +100,7 @@ function App() {
             style={{ marginBottom: 40, textAlign: "center" }}
             ta="center"
           >
-            Generate Social Media post from an image using LLaVA AI. 🌋
+            Image to Social Media Post using LLaVA 🌋
           </Title>
           <form
             onSubmit={form.onSubmit((v) => {
@@ -140,9 +136,9 @@ function App() {
             </Button>
           </form>
 
-          <div ref={targetRef}>
+          <div className={classes.display} ref={targetRef}>
             {generatedText && !isPending && (
-              <Container py="xl">
+             
                 <Card
                   onClick={() => {
                     navigator.clipboard.writeText(generatedText);
@@ -169,17 +165,15 @@ function App() {
                     </Text>
                   </div>
                 </Card>
-              </Container>
+             
             )}
           </div>
         </div>
       </AppShell.Main>
-      <AppShell.Footer
-      zIndex={-1}
-      withBorder={false} my="md">
+      <AppShell.Footer zIndex={-1} withBorder={false} my="md">
         <Center>
           <Text size="xs" c="dimmed">
-            {"n4ze3m | pls don't bankrupt me"}
+            {"n4ze3m /  © 2023"}
           </Text>
         </Center>
       </AppShell.Footer>

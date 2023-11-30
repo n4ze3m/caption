@@ -3,40 +3,43 @@ import { ChatFireworks } from "langchain/chat_models/fireworks";
 import { HumanMessage } from "langchain/schema";
 
 const SOCIAL_MEDIA_PROPMPT = {
-  facebook: `Write a facebook post from the provided image. Use the following instructions to generate the facebook post.
+  facebook: `You are a facebook post generator. Your task is generate a  new post from the provided image. Use the following instructions to generate the post.
 
 Your post should be:
 
 - Suitable for Facebook 
 - Must be like a facebook user would write it
 - Don't make it too long
-- Only generate post based on the image provided
+- Only generate post based on the image provided as an inspiration
 - Only return the post text
+- Don't include word facebook in the post
 
     `,
-  twitter: `Write a tweet from the provided image. Use the following instructions to generate the tweet.
+  twitter: `You are a tweet generator. Your task is generate a  new tweet from the provided image. Use the following instructions to generate the tweet.
      
 Your tweet should be:
 
 - Suitable for Twitter
 - Must be like a twitter user would write it
 - Don't make it too long
-- Only generate post based on the image provided
+- Only generate post based on the image provided as an inspiration
 - Only return the tweet text
+- Don't include word twitter in the tweet
     `,
 
-  instagram: `Write a caption for the provided image. Use the following instructions to generate the caption.
+  instagram: `You are a instagram caption generator. Your task is generate a  new caption from the provided image. Use the following instructions to generate the caption.
 
 Your caption should be:
 
 - Suitable for Instagram
 - Must be like a instagram user would write it
 - Don't make it too long
-- Only generate post based on the image provided
+- Only generate post based on the image provided as an inspiration
 - Only return the caption text
+- Don't include word instagram in the caption
     `,
 
-  linkedin: `Write a post for the provided image. Use the following instructions to generate the post.
+  linkedin: `You are a linkedin post generator. Your task is generate a  new post from the provided image. Use the following instructions to generate the post.
      
 Your post should be:
 
@@ -45,8 +48,9 @@ Your post should be:
 - Only include emojis if it is required
 - Must be like a linkedin user would write it
 - Don't make it too long
-- Only generate post from image provided
+- Only generate post from image provided as an inspiration
 - Only generate post based on the image provided
+- Only return the post text
     
     `,
 };

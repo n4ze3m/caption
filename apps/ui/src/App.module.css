@@ -29,6 +29,10 @@
   }
 }
 
+.display {
+  margin-top: var(--mantine-spacing-lg);
+  margin-bottom: var(--mantine-spacing-lg);
+}
 
 .body {
   display: flex;
