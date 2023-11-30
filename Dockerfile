@@ -5,6 +5,7 @@ RUN apt update
 RUN npm --no-update-notifier --no-fund --global install pnpm
 
 COPY . .
+
 RUN pnpm install
 
 RUN pnpm build
