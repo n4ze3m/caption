@@ -69,7 +69,10 @@ function App() {
   });
 
   return (
-    <AppShell header={{ height: 60 }} padding="md">
+    <AppShell
+      header={{ height: 60 }}
+      padding="md"
+    >
       <AppShell.Header>
         <div className={classes.header}>
           <Group justify="space-between">
@@ -92,7 +95,8 @@ function App() {
         </div>
       </AppShell.Header>
 
-      <AppShell.Main>
+      <AppShell.Main
+      >
         <div className={classes.main}>
           <Title
             order={2}
@@ -170,7 +174,9 @@ function App() {
           </div>
         </div>
       </AppShell.Main>
-      <AppShell.Footer withBorder={false} my="md">
+      <AppShell.Footer
+      zIndex={-1}
+      withBorder={false} my="md">
         <Center>
           <Text size="xs" c="dimmed">
             {"n4ze3m | pls don't bankrupt me"}

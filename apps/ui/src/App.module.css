@@ -32,4 +32,12 @@
 
 .body {
   display: flex;
+  /* mobild view make it row */
+  flex-direction: column;
+
+  /* desktop view make it column */
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+  
 }
