@@ -33,7 +33,11 @@ const app: FastifyPluginAsync<AppOptions> = async (
     options: opts,
     forceESM: true,
   });
-
+  fastify.register(fastifyStatic, {
+    root: path.join(__dirname, "public"),
+    preCompressed: true,
+  });
+  
   // This loads all plugins defined in routes
   // define your routes in one of these
   void fastify.register(AutoLoad, {
@@ -42,11 +46,7 @@ const app: FastifyPluginAsync<AppOptions> = async (
     forceESM: true,
   });
 
-  fastify.register(fastifyStatic, {
-    root: path.join(__dirname, "public"),
-    preCompressed: true,
-  });
-  
+
 };
 
 export default app;

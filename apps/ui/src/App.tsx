@@ -173,7 +173,7 @@ function App() {
       <AppShell.Footer withBorder={false} my="md">
         <Center>
           <Text size="xs" c="dimmed">
-            {"n4ze3m | don't bankrupt me"}
+            {"n4ze3m | pls don't bankrupt me"}
           </Text>
         </Center>
       </AppShell.Footer>
