@@ -1,0 +1,35 @@
+.header {
+  height: rem(60px);
+  padding-left: var(--mantine-spacing-md);
+  padding-top: var(--mantine-spacing-md);
+}
+
+.main {
+  padding: var(--mantine-spacing-md);
+  margin-top: var(--mantine-spacing-md);
+}
+
+/* form max-width is 400px */
+
+.form {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.card {
+  background-color: var(--mantine-color-body);
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: var(--mantine-shadow-md);
+  }
+}
+
+
+.body {
+  display: flex;
+}

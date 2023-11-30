@@ -1,0 +1,50 @@
+{
+  "type": "module",
+  "name": "caption",
+  "description": "This project was bootstrapped with Fastify-CLI.",
+  "version": "1.0.0",
+  "main": "app.ts",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run build:ts && tsc -p test/tsconfig.json && c8 tap --ts \"test/**/*.test.ts\"",
+    "start": "npm run build:ts && fastify start -l info dist/app.js",
+    "build:ts": "tsc",
+    "watch:ts": "tsc -w",
+    "dev": "npm run build:ts && concurrently -k -p \"[{name}]\" -n \"TypeScript,App\" -c \"yellow.bold,cyan.bold\" \"npm:watch:ts\" \"npm:dev:start\"",
+    "dev:start": "fastify start --ignore-watch=.ts$ -w -l info -P dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/autoload": "^5.0.0",
+    "@fastify/cors": "^8.4.1",
+    "@fastify/sensible": "^5.0.0",
+    "@fastify/static": "^6.12.0",
+    "@xenova/transformers": "^2.9.0",
+    "fastify": "^4.0.0",
+    "fastify-cli": "^5.9.0",
+    "fastify-plugin": "^4.0.0",
+    "langchain": "^0.0.198"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.4",
+    "@types/tap": "^15.0.5",
+    "c8": "^7.13.0",
+    "concurrently": "^8.2.2",
+    "fastify-tsconfig": "^2.0.0",
+    "tap": "^16.1.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^5.2.2"
+  },
+  "tap": {
+    "node-arg": [
+      "--no-warnings",
+      "--experimental-loader",
+      "ts-node/esm"
+    ],
+    "coverage": false
+  }
+}
