@@ -21,7 +21,7 @@ RUN npm --no-update-notifier --no-fund --global install pnpm
 COPY --from=server /app/apps/api/dist/ .
 COPY --from=server /app/apps/api/package.json .
 # Copy UI
-COPY --from=server /app/app/ui/dist/ ./public
+COPY --from=server /app/apps/ui/dist/ ./public
 
 RUN yarn install --production  --frozen-lockfile
 
