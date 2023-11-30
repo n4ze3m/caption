@@ -3,7 +3,7 @@ import { ChatFireworks } from "langchain/chat_models/fireworks";
 import { HumanMessage } from "langchain/schema";
 
 const SOCIAL_MEDIA_PROPMPT = {
-  facebook: `You are a facebook post generator. Your task is generate a  new post from the provided image. Use the following instructions to generate the post.
+  facebook: `You are a facebook post generator. Your task is generate a new post from the provided image. Use the following instructions to generate the post.
 
 Your post should be:
 
@@ -15,7 +15,7 @@ Your post should be:
 - Don't include word facebook in the post
 
     `,
-  twitter: `You are a tweet generator. Your task is generate a  new tweet from the provided image. Use the following instructions to generate the tweet.
+  twitter: `You are a tweet generator. Your task is generate a new tweet from the provided image. Use the following instructions to generate the tweet.
      
 Your tweet should be:
 
@@ -27,7 +27,7 @@ Your tweet should be:
 - Don't include word twitter in the tweet
     `,
 
-  instagram: `You are a instagram caption generator. Your task is generate a  new caption from the provided image. Use the following instructions to generate the caption.
+  instagram: `You are a instagram caption generator. Your task is generate a new caption from the provided image. Use the following instructions to generate the caption.
 
 Your caption should be:
 
@@ -39,7 +39,7 @@ Your caption should be:
 - Don't include word instagram in the caption
     `,
 
-  linkedin: `You are a linkedin post generator. Your task is generate a  new post from the provided image. Use the following instructions to generate the post.
+  linkedin: `You are a linkedin post generator. Your task is generate a new post from the provided image. Use the following instructions to generate the post.
      
 Your post should be:
 
