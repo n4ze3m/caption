@@ -18,8 +18,8 @@ RUN npm install -g node-gyp
 RUN apt-get clean autoclean && apt-get autoremove --yes && rm -rf /var/lib/{apt,dpkg,cache,log}/
 RUN npm --no-update-notifier --no-fund --global install pnpm
 # Copy API
-COPY --from=server /app/apps/api/dist/ .
 COPY --from=server /app/apps/api/package.json .
+COPY --from=server /app/apps/api/dist/ .
 # Copy UI
 COPY --from=server /app/apps/ui/dist/ ./public
 
